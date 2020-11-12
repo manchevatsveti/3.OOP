@@ -4,6 +4,8 @@ public class BMI {
 	private String name;
 	private int age;
 	private double weight,height;
+	public static final double KG_PER_POUND = 0.45359237;
+	public static final double METER_PER_INCH = 0.0254;
 	BMI(String name, int age, double weight,double height){
 		this.name = name;
 		this.age = age;
@@ -29,7 +31,7 @@ public class BMI {
 		return height;
 	}
 	public double getBMI() {
-		double bmi = (weight)/(Math.pow(height,2));
+		double bmi = (weight*KG_PER_POUND)/(Math.pow(height*METER_PER_INCH,2));
 		return Math.round(bmi*100)/100.0;
 	}
 	public String getStatus() {
