@@ -44,7 +44,6 @@ public class Employee extends Person {
         this.dateHired = dateHired;
     }
 
-    @Override
     public String toString() {
         return "Name: " + getName() + " Class: " + this.getClass().getName();
     }
