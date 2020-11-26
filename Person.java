@@ -7,8 +7,11 @@ public class Person {
     private String phoneNumber;
     private String email;
 
-    public Person(String name) {
-        this.name = name;
+    public Person(String name,String adress, String phoneNumber, String email) {
+        setName(name);
+        setAddress(adress);
+        setPhoneNumber(phoneNumber);
+        setEmail(email);
     }
 
     public String getName() {
@@ -44,6 +47,6 @@ public class Person {
     }
 
     public String toString() {
-        return "Name: " + getName() + " Class: " + this.getClass().getName();
+        return "Name: " + getName() + " Phone number: "+ phoneNumber+ " Adress: "+ address+" Email: "+ email;
     }
 }
