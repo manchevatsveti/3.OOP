@@ -9,17 +9,13 @@ public class Student extends Person {
 
     private String status;
 
-    public Student(String name) {
-        super(name);
-    }
-
-    public Student(String name, String status) {
-        super(name);
+    public Student(String n, String a, String p, String e, String status) {
+        super(n,a,p,e);
         this.status = status;
     }
 
     
     public String toString() {
-        return "Name: " + getName() + " Class: " + this.getClass().getName();
+        return super.toString() + " Status: "+ status;
     }
 }
