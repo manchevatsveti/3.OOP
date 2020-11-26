@@ -4,14 +4,9 @@ public class Staff extends Employee {
 
     private String title;
 
-    public Staff(String name) {
-        this(name, "none");
-
-    }
-
-    public Staff(String name, String title) {
-        super(name);
-        this.title = title;
+    public Staff(String n, String a, String p, String e, String o, double s, String t) {
+        super(n, a, p, e, s, o);
+        setTitle(t);
     }
 
     public String getTitle() {
@@ -24,6 +19,6 @@ public class Staff extends Employee {
 
    
     public String toString() {
-        return "Name: " + getName() + " Class: " + this.getClass().getName();
+        return super.toString()+ " Title: "+ title;
     }
 }
