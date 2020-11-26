@@ -6,15 +6,8 @@ public class Employee extends Person {
     private String office;
     private Date dateHired = new Date();;
 
-    public Employee(String name) {
-        super(name);
-        salary=0;
-        office="none";
-        dateHired=null;
-    }
-
-    public Employee(String name, double salary, String office, Date dateHired) {
-        super(name);
+    public Employee(String n, String a, String p, String e, double salary, String office) {
+    	super(n,a,p,e);
         this.salary = salary;
         this.office = office;
         this.dateHired = dateHired;
@@ -45,6 +38,6 @@ public class Employee extends Person {
     }
 
     public String toString() {
-        return "Name: " + getName() + " Class: " + this.getClass().getName();
+        return super.toString()+ " Salary: "+ salary+ " Office: "+ office+ " Date Hired: "+ dateHired;
     }
 }
