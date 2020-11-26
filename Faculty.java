@@ -2,24 +2,20 @@ package edu.smg;
 
 public class Faculty extends Employee {
 	
-    private String officeHours;
+    private double officeHours;
     private String rank;
-
-    public Faculty(String name) {
-        this(name, "9-5PM", "Employee");
+   
+    public Faculty( String n, String a, String p, String e, String o, double s, double oh, String r) {
+    	super(n, a, p, e, s, o);
+        setOfficeHours(oh);
+        setRank(r);
     }
 
-    public Faculty(String name, String officeHours, String rank) {
-        super(name);
-        this.officeHours = officeHours;
-        this.rank = rank;
-    }
-
-    public String getOfficeHours() {
+    public double getOfficeHours() {
         return officeHours;
     }
 
-    public void setOfficeHours(String officeHours) {
+    public void setOfficeHours(double officeHours) {
         this.officeHours = officeHours;
     }
 
@@ -33,6 +29,7 @@ public class Faculty extends Employee {
 
     
     public String toString() {
-        return "Name: " + getName() + " Class: " + this.getClass().getName();
+        return super.toString() + " Office hours: "+ officeHours+ " Rank: "+ rank;
     }
 }
+
